@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Frameless shower glass, direct from the manufacturer | Leal Glass Inc</title>
+<meta name="description" content="Frameless glass shower doors, tub enclosures, panels and hardware at direct wholesale prices. Pick up in North Miami, FL or ship anywhere in the US.">
+<meta name="theme-color" content="#070B10">
+<meta name="color-scheme" content="dark">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23070B10'/%3E%3Cpath d='M12 6h14l-5.5 20H6.5z' fill='none' stroke='%23E8F1F5' stroke-width='1.7' stroke-linejoin='round'/%3E%3Cpath d='M12.5 21l6.5-10.5' stroke='%235CE1E6' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Unbounded:wght@300..500&display=swap">
+
+<style>
+/* ==========================================================================
+   LEAL GLASS INC. Homepage prototype. Concept: Optical Lab.
+   Dark, calm surfaces. One bold moment: the enclosure builder.
+   ========================================================================== */
+
+/* ---------- 1. Design tokens ---------- */
+:root{
+  color-scheme:dark;
+
+  /* Color */
+  --ink:#070B10;
+  --deep:#0A1017;
+  --deep-2:#0C1219;
+  --line:rgba(190,225,240,.14);
+  --line-hi:rgba(190,225,240,.30);
+  --text:#E8F1F5;
+  --muted:#98A9B5;
+  --muted-hi:#A9B8C3;
+  --aqua:#5CE1E6;
+  --aqua-ink:#03161A;
+  --aqua-tint:rgba(92,225,230,.12);
+  --aqua-line:rgba(92,225,230,.55);
+  --magenta:rgba(255,120,200,.65);
+  --indigo:rgba(88,92,255,.22);
+  --card:rgba(255,255,255,.025);
+  --tile-a:#E7EDF1;
+  --tile-b:#C3CFD6;
+  --flag:#FFC857;               /* Review marker only. Not part of the brand. Remove before launch. */
+
+  /* Type families */
+  --f-display:"Unbounded",ui-sans-serif,system-ui,sans-serif;
+  --f-body:"Instrument Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+
+  /* Type scale */
+  --fs-h1:clamp(2.125rem,1.1rem + 3.2vw,3.875rem);     /* 34px to 62px */
+  --fs-h2:clamp(1.625rem,1.05rem + 2vw,2.75rem);       /* 26px to 44px */
+  --fs-h3:clamp(1.125rem,1rem + .5vw,1.375rem);        /* 18px to 22px */
+  --fs-body:clamp(1rem,.96rem + .18vw,1.125rem);       /* 16px to 18px */
+  --fs-mono:.75rem;                                    /* 12px */
+
+  /* Space */
+  --s-1:4px; --s-2:8px; --s-3:12px; --s-4:16px; --s-5:24px; --s-6:32px; --s-7:48px; --s-8:72px; --s-9:104px;
+
+  /* Shape */
+  --r-btn:4px;
+  --r-card:12px;
+  --r-builder:28px;
+
+  /* Motion */
+  --t:220ms cubic-bezier(.2,.7,.2,1);
+}
+
+/* ---------- 2. Base ---------- */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:88px}
+body{
+  margin:0;position:relative;min-height:100vh;
+  background:var(--ink);color:var(--text);
+  font-family:var(--f-body);font-size:var(--fs-body);line-height:1.6;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+}
+h1,h2,h3,h4,p,ul,dl,dd,figure{margin:0}
+ul{padding:0;list-style:none}
+a{color:inherit}
+svg{display:block;max-width:100%}
+button,input{font:inherit;color:inherit}
+button{cursor:pointer}
+[hidden]{display:none!important}
+::selection{background:rgba(92,225,230,.32);color:#fff}
+:where(a,button,input):focus-visible{outline:2px solid var(--aqua);outline-offset:3px}
+
+h1,h2,h3{font-family:var(--f-display);font-weight:400;text-wrap:balance;font-synthesis:none}
+h1{font-size:var(--fs-h1);line-height:1.04;letter-spacing:-.02em}
+h2{font-size:var(--fs-h2);line-height:1.1;letter-spacing:-.02em}
+h3{font-size:var(--fs-h3);line-height:1.25;letter-spacing:-.01em}
+p{text-wrap:pretty}
+
+.wrap{width:min(100% - 32px,1240px);margin-inline:auto}
+@media (min-width:700px){.wrap{width:min(100% - 48px,1240px)}}
+
+.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+.skip{position:absolute;left:16px;top:-80px;z-index:100;padding:12px 18px;border-radius:var(--r-btn);background:var(--aqua);color:var(--aqua-ink);font-weight:600;text-decoration:none}
+.skip:focus{top:12px}
+
+.mono{font-family:var(--f-mono);font-size:var(--fs-mono);line-height:1.4;letter-spacing:.1em;text-transform:uppercase}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font:500 var(--fs-mono)/1.3 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--aqua)}
+.eyebrow::before{content:"";flex:none;width:7px;height:7px;background:var(--aqua)}
+.eyebrow.lit::before{box-shadow:0 0 12px 2px rgba(92,225,230,.75)}
+.num{font-variant-numeric:tabular-nums}
+.nowrap{white-space:nowrap}
+
+/* Review markers for the prototype. They show where real content is still needed. */
+.flag{display:inline-block;padding:5px 8px;border:1px dashed rgba(255,200,87,.7);border-radius:var(--r-btn);background:rgba(255,200,87,.07);color:var(--flag);font:600 .6875rem/1 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
+.todo{color:var(--flag);text-decoration:underline dashed;text-decoration-thickness:1px;text-underline-offset:5px}
+
+/* ---------- 3. Buttons and links ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 22px;border:1px solid transparent;border-radius:var(--r-btn);font:600 1rem/1.2 var(--f-body);text-decoration:none;text-align:center;transition:transform var(--t),box-shadow var(--t),background-color var(--t),border-color var(--t),color var(--t)}
+.btn svg{width:16px;height:16px;flex:none}
+.btn-primary{background:var(--aqua);color:var(--aqua-ink)}
+.btn-primary:hover{transform:translateY(-1px);box-shadow:0 8px 28px -8px rgba(92,225,230,.65)}
+.btn-ghost{background:transparent;color:var(--text);border-color:var(--line-hi)}
+.btn-ghost:hover{transform:translateY(-1px);border-color:var(--aqua-line);background:rgba(92,225,230,.06);box-shadow:0 6px 24px -10px rgba(92,225,230,.55)}
+.btn:active{transform:translateY(0)}
+.link{padding-block:12px;color:var(--aqua);font-weight:600;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px;transition:color var(--t)}
+.link:hover{color:#fff}
+
+/* ---------- 4. Atmosphere ---------- */
+.atmos{position:absolute;top:0;left:0;right:0;height:1240px;z-index:0;overflow:hidden;pointer-events:none;-webkit-mask-image:linear-gradient(#000 72%,transparent);mask-image:linear-gradient(#000 72%,transparent)}
+.glow{position:absolute;border-radius:50%}
+.glow-a{right:-12%;top:-20%;width:min(78vw,980px);aspect-ratio:1;background:radial-gradient(closest-side,rgba(92,225,230,.20),rgba(92,225,230,.07) 55%,transparent 78%)}
+.glow-b{left:-16%;top:30%;width:min(70vw,880px);aspect-ratio:1;background:radial-gradient(closest-side,var(--indigo),rgba(88,92,255,.07) 55%,transparent 78%)}
+.gridlines{position:absolute;inset:0;background-image:linear-gradient(rgba(190,225,240,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(190,225,240,.055) 1px,transparent 1px);background-size:64px 64px;background-position:center top;-webkit-mask-image:linear-gradient(to bottom,#000 8%,transparent 86%);mask-image:linear-gradient(to bottom,#000 8%,transparent 86%)}
+.atmos-in{position:relative;width:min(100% - 48px,1240px);height:100%;margin-inline:auto}
+.slab{display:none;position:absolute;right:-96px;top:170px;width:min(30vw,380px);aspect-ratio:3/4.4;border:1px solid rgba(190,235,245,.26);border-radius:10px;background:linear-gradient(140deg,rgba(150,225,240,.17) 0%,rgba(150,225,240,.04) 48%,rgba(255,255,255,.09) 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,.18);transform:rotate(-9deg);animation:drift 9s ease-in-out infinite alternate}
+.slab::before{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(112deg,transparent 30%,rgba(255,255,255,.16) 40%,rgba(255,255,255,.02) 52%,transparent 60%)}
+@media (min-width:900px){.slab{display:block}}
+@keyframes drift{from{transform:translate3d(0,-10px,0) rotate(-9deg)}to{transform:translate3d(-12px,14px,0) rotate(-7deg)}}
+
+main,.announce,.footer{position:relative;z-index:1}
+
+/* ---------- 5. Announcement bar ---------- */
+.announce{background:rgba(10,16,23,.8);border-bottom:1px solid var(--line);color:var(--muted-hi);font:400 var(--fs-mono)/1.3 var(--f-mono);letter-spacing:.08em;text-transform:uppercase}
+.announce-in{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;min-height:44px}
+.announce-mid{text-align:center}
+.announce a{justify-self:end;display:inline-flex;align-items:center;min-height:44px;color:var(--text);text-decoration:none;white-space:nowrap;transition:color var(--t)}
+.announce a:hover{color:var(--aqua)}
+@media (max-width:759px){.announce-in{grid-template-columns:1fr auto}.announce-mid{display:none}}
+
+/* ---------- 6. Sticky glass navigation ---------- */
+.nav{position:sticky;top:0;z-index:50;background:rgba(7,11,16,.72);-webkit-backdrop-filter:blur(16px) saturate(140%);backdrop-filter:blur(16px) saturate(140%);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;gap:20px;min-height:68px}
+.brand{display:inline-flex;align-items:center;gap:10px;min-height:44px;color:var(--text);text-decoration:none}
+.brand-mark{width:28px;height:30px;flex:none}
+.brand-text{font:500 .75rem/1 var(--f-display);letter-spacing:.16em;white-space:nowrap}
+@media (min-width:480px){.brand-text{font-size:.9375rem;letter-spacing:.22em}}
+@media (max-width:339px){.brand-text{display:none}}
+.links{display:none;margin-inline:auto;align-items:center;gap:2px}
+.links a{display:inline-flex;align-items:center;min-height:44px;padding:0 11px;border-radius:var(--r-btn);color:var(--muted-hi);font-size:.875rem;font-weight:500;text-decoration:none;white-space:nowrap;transition:color var(--t),background-color var(--t)}
+.links a:hover{color:var(--text);background:rgba(255,255,255,.05)}
+.nav-actions{display:flex;align-items:center;gap:8px;margin-left:auto}
+.icon-btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:44px;min-height:44px;padding:0 12px;border:1px solid var(--line);border-radius:var(--r-btn);background:rgba(255,255,255,.03);color:var(--text);font:500 1rem/1 var(--f-body);transition:border-color var(--t),background-color var(--t)}
+.icon-btn:hover{border-color:var(--aqua-line);background:rgba(92,225,230,.07)}
+.icon-btn svg{width:20px;height:20px;flex:none}
+.icon-btn .lbl{display:none}
+.count{display:inline-grid;place-items:center;min-width:22px;height:22px;padding:0 5px;border:1px solid var(--line-hi);border-radius:var(--r-btn);background:var(--ink);font:500 var(--fs-mono)/1 var(--f-mono)}
+.cart{padding:0}
+.cart .count{position:absolute;top:-8px;right:-8px}
+.menu-btn .i-close{display:none}
+.menu-btn[aria-expanded="true"] .i-open{display:none}
+.menu-btn[aria-expanded="true"] .i-close{display:block}
+@media (min-width:480px){.menu-btn{padding:0 12px}.menu-btn .lbl{display:inline}}
+@media (max-width:899.98px){
+  .nav.open .links{display:flex;flex-direction:column;align-items:stretch;gap:0;position:absolute;left:0;right:0;top:100%;margin:0;padding:6px 16px 14px;background:var(--ink);border-bottom:1px solid var(--line)}
+  .nav.open .links a{min-height:52px;padding:0 4px;border-bottom:1px solid var(--line);border-radius:0;font-size:1.0625rem}
+}
+@media (min-width:900px){.links{display:flex}.nav-actions{margin-left:0}.menu-btn{display:none}}
+@media (min-width:1200px){
+  .links a{font-size:1rem;padding:0 14px}
+  .icon-btn .lbl{display:inline}
+  .cart{padding:0 12px}
+  .cart .count{position:static}
+}
+
+.search-panel{position:absolute;left:0;right:0;top:100%;background:var(--ink);border-bottom:1px solid var(--line)}
+.search-in{display:grid;gap:12px;padding-block:16px 20px}
+.search-input{width:100%;min-height:52px;padding:0 16px;border:1px solid var(--line-hi);border-radius:var(--r-btn);background:rgba(255,255,255,.04);font-size:1rem}
+.search-input::placeholder{color:#8EA0AC}
+.results{display:grid;gap:4px}
+.results a,.results .hint{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:4px 16px;min-height:44px;padding:10px 14px;border:1px solid transparent;border-radius:var(--r-btn);text-decoration:none}
+.results a:hover{background:rgba(92,225,230,.07);border-color:var(--aqua-line)}
+.results .hint{color:var(--muted-hi)}
+.results .where{font:400 var(--fs-mono)/1.3 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted-hi)}
+
+/* ---------- 7. Hero ---------- */
+.hero-grid{display:grid;gap:clamp(32px,5vw,64px);align-items:start;padding-block:clamp(28px,4vw,48px) clamp(40px,6vw,72px)}
+.hero-grid>*{min-width:0}
+@media (min-width:960px){.hero-grid{grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr)}}
+.hero-copy{display:grid;gap:24px;justify-items:start;max-width:640px}
+@media (min-width:960px){.hero-copy{padding-top:56px}}
+.lead{max-width:34em;color:var(--muted-hi);font-size:clamp(1.0625rem,1rem + .35vw,1.25rem)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:4px}
+.trust{display:grid;gap:10px;margin-top:12px;color:var(--muted-hi);font:500 var(--fs-mono)/1.4 var(--f-mono);letter-spacing:.1em;text-transform:uppercase}
+.trust li{display:inline-flex;align-items:center;gap:10px}
+.trust li::before{content:"";width:6px;height:6px;background:var(--aqua)}
+
+/* ---------- 8. Enclosure builder (the one bold moment) ---------- */
+.builder{position:relative;isolation:isolate;padding:clamp(14px,1.8vw,18px);border-radius:var(--r-builder);background:linear-gradient(180deg,rgba(14,22,31,.94),rgba(9,14,20,.96))}
+.builder::before{content:"";position:absolute;inset:0;z-index:-1;padding:1px;border-radius:inherit;background:linear-gradient(135deg,var(--aqua) 0%,rgba(255,255,255,.07) 40%,rgba(255,255,255,.14) 62%,var(--magenta) 100%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude;pointer-events:none}
+.builder-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+.builder-head h2{font-size:1.0625rem;line-height:1.2;letter-spacing:-.01em}
+.tag{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border:1px solid var(--aqua-line);border-radius:var(--r-btn);color:var(--aqua);font:500 .6875rem/1 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+.tag::before{content:"";width:6px;height:6px;background:var(--aqua)}
+
+.scene-frame{overflow:hidden;border:1px solid rgba(255,255,255,.1);border-radius:var(--r-card);background:var(--tile-a);line-height:0}
+.scene{width:100%;height:auto;aspect-ratio:640/384}
+.scene .hw{stroke-width:1}
+.scene .hl{fill:none;stroke:var(--hl);stroke-width:1.2;stroke-linecap:round}
+.scene .screw{fill:var(--screw)}
+.scene .axle{fill:var(--axle)}
+.scene .fx{fill:#FBFDFE;stroke:#8C9FAB;stroke-width:1}
+.scene .dim path{fill:none;stroke:#3B5160;stroke-width:1}
+.scene .dim text{font:500 11px var(--f-mono);letter-spacing:.06em;fill:#2C4250}
+.scene .hw-g{filter:drop-shadow(0 1px 1px rgba(20,35,45,.28))}
+.scene[data-finish="chrome"]{--hl:rgba(255,255,255,.95);--axle:rgba(40,55,65,.55);--screw:#6A7882}
+.scene[data-finish="chrome"] .hw{fill:url(#hwChrome);stroke:#5F6D77}
+.scene[data-finish="chrome"] .hw.hz{fill:url(#hwChromeV)}
+.scene[data-finish="black"]{--hl:rgba(255,255,255,.3);--axle:rgba(255,255,255,.22);--screw:#3A4148}
+.scene[data-finish="black"] .hw{fill:url(#hwBlack);stroke:#000}
+.scene[data-finish="black"] .hw.hz{fill:url(#hwBlackV)}
+@media (max-width:560px){.scene .dim text{font-size:17px}}
+
+/* The one orchestrated moment: the scene redraws when a chip changes. */
+.scene.animate .glass{animation:glassIn .36s cubic-bezier(.2,.7,.2,1) both}
+.scene.animate .streak{animation:streakIn .8s .1s cubic-bezier(.2,.7,.2,1) both}
+.scene.animate .hw-g{animation:hwIn .3s .1s ease-out both}
+@keyframes glassIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes streakIn{from{opacity:0;transform:translateX(-36px)}to{opacity:1;transform:none}}
+@keyframes hwIn{from{opacity:0}to{opacity:1}}
+
+.field-label{display:flex;align-items:baseline;gap:10px;margin:14px 0 8px;color:var(--muted-hi);font:500 .6875rem/1 var(--f-mono);letter-spacing:.14em;text-transform:uppercase}
+.field-label .n{color:var(--aqua)}
+.chips{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(138px,1fr))}
+.chip,.finish,.fchip{position:relative;border:1px solid var(--line);border-radius:var(--r-btn);background:rgba(255,255,255,.03);color:var(--text);text-align:left;transition:border-color var(--t),background-color var(--t),transform var(--t)}
+.chip:hover,.finish:hover,.fchip:hover{border-color:var(--line-hi);background:rgba(255,255,255,.06)}
+.chip{display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:6px;min-height:58px;padding:9px 34px 9px 12px}
+.chip-name{font-size:1rem;font-weight:500;line-height:1.2}
+.chip-price{font:500 var(--fs-mono)/1 var(--f-mono);letter-spacing:.06em;color:var(--muted-hi);font-variant-numeric:tabular-nums}
+.tick{position:absolute;top:8px;right:8px;width:14px;height:14px;fill:none;stroke:var(--aqua);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;opacity:0;transform:scale(.6);transition:opacity var(--t),transform var(--t)}
+[aria-pressed="true"]{border-color:var(--aqua);background:var(--aqua-tint)}
+[aria-pressed="true"]:hover{border-color:var(--aqua);background:rgba(92,225,230,.16)}
+[aria-pressed="true"] .tick{opacity:1;transform:none}
+.chip[aria-pressed="true"] .chip-price{color:var(--aqua)}
+.finishes{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.finish-row{display:grid;gap:0 14px;align-items:center;margin-top:12px}
+@media (min-width:520px){.finish-row{grid-template-columns:auto 1fr}.finish-row .field-label{margin:14px 0 0}}
+.finish{display:flex;align-items:center;gap:10px;min-height:48px;padding:0 28px 0 12px;font-size:1rem;font-weight:500;white-space:nowrap}
+.sw{flex:none;width:20px;height:20px;border:1px solid rgba(255,255,255,.4);border-radius:50%}
+.sw-chrome{background:conic-gradient(from 200deg,#fff,#97A4AD,#F4F7F9,#7B8892,#fff)}
+.sw-black{background:radial-gradient(circle at 35% 30%,#555D65,#0B0D10 70%)}
+
+.spec{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;margin-top:14px;border:1px solid var(--line);border-radius:var(--r-btn);background:var(--line);overflow:hidden}
+.spec>div{padding:10px 14px;background:var(--deep-2)}
+.spec dt{color:var(--muted);font:500 .6875rem/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase}
+.spec dd{margin-top:6px;font-size:1rem;font-weight:500;line-height:1.3}
+@media (max-width:559px){.spec{grid-template-columns:1fr}.spec>div{display:flex;align-items:baseline;justify-content:space-between;gap:16px}.spec dd{margin:0;text-align:right}}
+.buy{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 20px;margin-top:16px}
+.price{display:flex;align-items:baseline;gap:12px}
+.pre{font:500 var(--fs-mono)/1 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted-hi)}
+.amount{font:400 clamp(2rem,1.6rem + 1.6vw,2.75rem)/1 var(--f-display);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.buy .btn{min-height:52px}
+@media (max-width:480px){.buy .btn{width:100%}}
+.noscript{padding:12px 4px 0;color:var(--muted-hi);font-size:.9375rem}
+
+/* ---------- 9. Facts strip ---------- */
+.facts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;border:1px solid var(--line);border-radius:var(--r-card);background:var(--line);overflow:hidden}
+.facts-grid li{display:grid;gap:6px;align-content:start;padding:22px 24px;background:rgba(10,16,23,.88)}
+.fact-v{font:300 clamp(1.5rem,1.2rem + 1vw,1.75rem)/1.1 var(--f-display);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.fact-l{color:var(--muted-hi);font-size:1rem;text-wrap:balance}
+
+/* ---------- 10. Sections ---------- */
+.section{padding-block:clamp(48px,6vw,80px)}
+.section+.section{border-top:1px solid var(--line)}
+.section.flush{padding-top:0;border-top:0}
+.sec-head{display:grid;gap:14px;margin-bottom:clamp(28px,4vw,48px);justify-items:start}
+.sec-head h2{max-width:20ch}
+.sec-head.split{grid-template-columns:1fr;align-items:end}
+@media (min-width:900px){.sec-head.split{grid-template-columns:1fr auto}}
+
+/* Shop by enclosure */
+.cards{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.card{position:relative;display:flex;flex-direction:column;gap:18px;min-height:272px;padding:22px;border:1px solid var(--line);border-radius:var(--r-card);background:var(--card);box-shadow:inset 0 1px 0 rgba(255,255,255,.05);transition:transform var(--t),border-color var(--t),background-color var(--t)}
+.card:hover{transform:translateY(-4px);border-color:var(--aqua-line);background:rgba(255,255,255,.04)}
+.card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.spec-line{max-width:28ch;color:var(--muted-hi);font:500 var(--fs-mono)/1.5 var(--f-mono);letter-spacing:.1em;text-transform:uppercase}
+.glyph{flex:none;width:56px;height:56px;color:var(--aqua)}
+.stretch{text-decoration:none}
+.stretch::after{content:"";position:absolute;inset:0;border-radius:var(--r-card)}
+.stretch:focus-visible{outline:none}
+.stretch:focus-visible::after{outline:2px solid var(--aqua);outline-offset:3px}
+.card-foot{display:grid;gap:14px;margin-top:auto}
+.from{display:flex;align-items:baseline;gap:12px}
+.amt-lg{font:400 clamp(2rem,1.7rem + 1vw,2.5rem)/1 var(--f-display);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.card-cta{display:inline-flex;align-items:center;gap:8px;color:var(--aqua);font-weight:600;transition:gap var(--t)}
+.card-cta svg{width:16px;height:16px}
+.card:hover .card-cta{gap:12px}
+@media (max-width:639px){.card{min-height:0;gap:16px}}
+
+/* Hardware */
+.panel{display:grid;gap:28px;padding:clamp(22px,3.5vw,40px);border:1px solid var(--line);border-radius:var(--r-card);background:var(--card);box-shadow:inset 0 1px 0 rgba(255,255,255,.05)}
+@media (min-width:900px){.panel{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);align-items:center;gap:48px}}
+.panel-copy{display:grid;gap:14px;justify-items:start}
+.panel-copy h2{font-size:clamp(1.375rem,1.1rem + 1.2vw,2rem)}
+.panel-copy p{color:var(--muted-hi)}
+.chip-wrap{display:flex;flex-wrap:wrap;gap:10px}
+.link-chip{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1px solid var(--line);border-radius:var(--r-btn);background:rgba(255,255,255,.03);text-decoration:none;font-weight:500;transition:border-color var(--t),background-color var(--t),transform var(--t)}
+.link-chip:hover{border-color:var(--aqua-line);background:rgba(92,225,230,.07);transform:translateY(-1px)}
+
+/* Spec sheet */
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.fchip{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;font-size:1rem;font-weight:500}
+.sheet-status{margin:0 0 12px;color:var(--muted-hi)}
+.sheet{--cols:minmax(0,1.5fr) minmax(0,1.2fr) minmax(112px,.6fr) 168px;overflow:hidden;border:1px solid var(--line);border-radius:var(--r-card);background:var(--card);box-shadow:inset 0 1px 0 rgba(255,255,255,.05)}
+.sheet-head{display:none}
+@media (min-width:900px){.sheet-head{display:grid;grid-template-columns:var(--cols);column-gap:24px;padding:13px 24px;border-bottom:1px solid var(--line);color:var(--muted)}.sheet-head span:nth-child(3){text-align:right}}
+.sheet-list{display:grid;gap:1px;background:var(--line)}
+.row{position:relative;display:grid;grid-template-columns:1fr auto;grid-template-areas:"name name" "spec spec" "price act";gap:6px 16px;align-items:center;padding:18px 16px;background:#090F15;transition:background-color var(--t),box-shadow var(--t)}
+@media (min-width:900px){.row{grid-template-columns:var(--cols);grid-template-areas:"name spec price act";column-gap:24px;padding:18px 24px}}
+.row:hover,.row:focus-within,.row:target{background:#0D1A21;box-shadow:inset 2px 0 0 var(--aqua)}
+.r-name{grid-area:name;font-size:1.0625rem;line-height:1.3}
+.r-spec{grid-area:spec;color:var(--muted-hi);font:400 .78125rem/1.5 var(--f-mono);letter-spacing:.08em;text-transform:uppercase}
+.r-price{grid-area:price;display:flex;flex-direction:column;align-items:flex-start;gap:4px;font:500 1.0625rem/1.1 var(--f-mono);font-variant-numeric:tabular-nums}
+@media (min-width:900px){.r-price{align-items:flex-end;text-align:right}}
+.r-price .unit{color:var(--muted-hi);font-size:.6875rem;letter-spacing:.1em;text-transform:uppercase}
+.btn-row{grid-area:act;min-height:44px;padding:0 16px;font-size:1rem}
+
+/* Why Leal */
+.pillars{display:grid;gap:28px 24px;grid-template-columns:1fr}
+.pillar{display:grid;gap:10px;align-content:start;padding-top:18px;border-top:2px solid var(--aqua)}
+.pillar h3{font-size:1.0625rem}
+.pillar p{color:var(--muted-hi)}
+@supports (grid-template-rows:subgrid){.pillar{grid-row:span 2;grid-template-rows:subgrid;row-gap:10px}}
+@media (min-width:640px){
+  .pillars{grid-template-columns:repeat(6,1fr)}
+  .pillar{grid-column:span 2}
+  .pillar:nth-child(4){grid-column:2 / span 2}
+  .pillar:nth-child(5){grid-column:4 / span 2}
+}
+@media (min-width:1100px){
+  .pillars{grid-template-columns:repeat(5,1fr)}
+  .pillar,.pillar:nth-child(4),.pillar:nth-child(5){grid-column:auto}
+}
+.trade{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px 32px;margin-top:clamp(36px,5vw,56px);padding:clamp(22px,3.5vw,36px);border:1px solid var(--line);border-radius:var(--r-card);background:linear-gradient(135deg,rgba(92,225,230,.08),rgba(255,255,255,.02) 55%)}
+.trade-copy{display:grid;gap:8px;max-width:46ch}
+.trade-copy p{color:var(--muted-hi)}
+.proof{margin-top:clamp(36px,5vw,56px)}
+.proof-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin-bottom:8px}
+.proof-head h3{font-size:1.125rem}
+.proof-sub{max-width:52ch;margin-bottom:20px;color:var(--muted-hi)}
+.proof-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr))}
+.slot{display:grid;gap:10px;align-content:start;padding:20px;border:1px dashed var(--line-hi);border-radius:var(--r-card)}
+.slot svg{width:28px;height:28px;color:var(--muted-hi)}
+.slot h4{font-size:1rem;font-weight:600}
+.slot p{color:var(--muted-hi);font-size:1rem}
+.slot .flag{justify-self:start}
+
+/* Pickup */
+.info{display:grid;grid-template-columns:1fr;gap:1px;border:1px solid var(--line);border-radius:var(--r-card);background:var(--line);overflow:hidden}
+@media (min-width:640px){.info{grid-template-columns:1fr 1fr}}
+.info>div{display:grid;gap:12px;align-content:start;padding:clamp(20px,3vw,32px);background:rgba(10,16,23,.9)}
+.info dt{color:var(--muted);font:500 var(--fs-mono)/1 var(--f-mono);letter-spacing:.14em;text-transform:uppercase}
+.info dd{display:grid;gap:10px;justify-items:start;font-size:clamp(1.0625rem,1rem + .5vw,1.375rem);font-weight:500;line-height:1.4;overflow-wrap:anywhere}
+.info address{font-style:normal}
+.info a{display:inline-flex;align-items:center;min-height:44px;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px;text-decoration-color:var(--line-hi)}
+.info a:hover{color:var(--aqua);text-decoration-color:var(--aqua)}
+.info .link{font-size:1rem}
+.info .sub{color:var(--muted-hi);font-size:1rem;font-weight:400}
+.note{margin-top:20px;color:var(--muted-hi)}
+
+/* Newsletter */
+.news{display:grid;gap:28px;padding:clamp(24px,4vw,48px);border:1px solid var(--line);border-radius:var(--r-card);background:radial-gradient(60% 130% at 100% 0%,rgba(92,225,230,.14),transparent 62%),var(--card)}
+@media (min-width:900px){.news{grid-template-columns:1.1fr .9fr;align-items:center;gap:48px}}
+.news-copy{display:grid;gap:12px;justify-items:start}
+.news-copy p{color:var(--muted-hi)}
+.news-copy .terms{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;font-size:1rem}
+.news-form{display:grid;grid-template-columns:1fr auto;gap:8px}
+@media (max-width:519px){.news-form{grid-template-columns:1fr}}
+.news-form input{width:100%;min-height:52px;padding:0 16px;border:1px solid var(--line-hi);border-radius:var(--r-btn);background:rgba(255,255,255,.04);font-size:1rem}
+.news-form input::placeholder{color:#8EA0AC}
+.news-form input[aria-invalid="true"]{border-color:var(--flag)}
+.news-form .btn{min-height:52px}
+.news-msg{grid-column:1/-1;min-height:1.6em;color:var(--muted-hi);font-size:1rem}
+.news-msg.err{color:var(--flag)}
+.news-msg.ok{color:var(--aqua)}
+
+/* ---------- 11. Footer ---------- */
+.footer{margin-top:clamp(24px,4vw,48px);border-top:1px solid var(--line);background:var(--deep)}
+.foot-grid{display:grid;gap:36px 32px;padding-block:clamp(40px,6vw,64px);grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr))}
+.foot-brand{grid-column:1/-1}
+.foot-brand{display:grid;gap:18px;align-content:start;justify-items:start;max-width:44ch}
+@media (min-width:1000px){.foot-grid{grid-template-columns:1.5fr 1fr 1fr 1fr}.foot-brand{grid-column:auto}}
+.foot-brand p{color:var(--muted-hi)}
+.social{display:flex;flex-wrap:wrap;gap:8px}
+.social a{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;border:1px solid var(--line);border-radius:var(--r-btn);text-decoration:none;font-weight:500;transition:border-color var(--t),background-color var(--t)}
+.social a:hover{border-color:var(--aqua-line);background:rgba(92,225,230,.06)}
+.social svg{width:14px;height:14px}
+.foot-col{display:grid;gap:6px;align-content:start}
+.foot-h{margin-bottom:8px;color:var(--muted);font:500 var(--fs-mono)/1 var(--f-mono);letter-spacing:.14em;text-transform:uppercase}
+.foot-col a,.foot-col .pending{display:inline-flex;flex-wrap:wrap;align-items:center;gap:6px 10px;min-height:44px;color:var(--muted-hi);text-decoration:none}
+.foot-col a:hover{color:var(--text)}
+.foot-bottom{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 24px;padding-block:20px 28px;border-top:1px solid var(--line);color:var(--muted-hi);font-size:1rem}
+.foot-bottom ul{display:flex;flex-wrap:wrap;gap:4px 20px}
+.foot-bottom a{display:inline-flex;align-items:center;min-height:44px;text-decoration:none}
+.foot-bottom a:hover{color:var(--text)}
+
+/* ---------- 12. Prototype toast ---------- */
+.toast{position:fixed;left:50%;bottom:20px;z-index:80;display:flex;align-items:center;gap:12px;width:max-content;max-width:calc(100% - 32px);padding:12px 16px;border:1px solid var(--line-hi);border-radius:var(--r-btn);background:var(--deep-2);color:var(--text);font-size:1rem;opacity:0;pointer-events:none;transform:translate(-50%,10px);transition:opacity var(--t),transform var(--t)}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* ---------- 13. Reduced motion ---------- */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Atmosphere: two glows, a 64px grid that fades out, and one slow drifting glass slab -->
+<div class="atmos" aria-hidden="true">
+  <i class="glow glow-a"></i>
+  <i class="glow glow-b"></i>
+  <i class="gridlines"></i>
+  <div class="atmos-in"><i class="slab"></i></div>
+</div>
+
+<!-- 1. Announcement bar -->
+<section class="announce" aria-label="Announcement">
+  <div class="wrap announce-in">
+    <p>Free shipping on orders over $75</p>
+    <p class="announce-mid">Original manufacturer and supplier, North Miami, FL</p>
+    <a href="tel:+13058420305">+1 305-842-0305</a>
+  </div>
+</section>
+
+<!-- 2. Sticky glass navigation -->
+<header class="nav" id="top">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="Leal Glass Inc, back to top">
+      <svg class="brand-mark" viewBox="0 0 28 30" aria-hidden="true" focusable="false">
+        <path d="M9.5 2.5h16l-6.8 25H2.7z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+        <path d="M12 21.5l7.2-12" fill="none" stroke="#5CE1E6" stroke-width="2" stroke-linecap="round"/>
+        <path d="M15.2 24.5l5-8.4" fill="none" stroke="#5CE1E6" stroke-opacity=".55" stroke-width="1.4" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-text">LEAL GLASS</span>
+    </a>
+
+    <nav class="links" id="site-nav" aria-label="Primary">
+      <a href="#products">Shop all</a>
+      <a href="#shop">Shower enclosures</a>
+      <a href="#hardware">Hardware</a>
+      <a href="#products" data-filter-link="tiles">Mirror tiles</a>
+      <a href="#trade">Trade</a>
+      <a href="#pickup">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" id="search-btn" type="button" aria-label="Search" aria-expanded="false" aria-controls="search-panel">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l4 4"/></svg>
+        <span class="lbl" aria-hidden="true">Search</span>
+      </button>
+      <button class="icon-btn cart" type="button" aria-label="Cart, 0 items" data-proto="Cart page">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h2.4l1.8 9h8.6l1.7-6.5H5.2"/><circle cx="7.5" cy="16" r="1.2"/><circle cx="14" cy="16" r="1.2"/></svg>
+        <span class="lbl" aria-hidden="true">Cart</span>
+        <span class="count num" aria-hidden="true">0</span>
+      </button>
+      <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
+        <svg class="i-open" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
+        <svg class="i-close" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15"/></svg>
+        <span class="lbl" aria-hidden="true">Menu</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="search-panel" id="search-panel" role="search" hidden>
+    <div class="wrap search-in">
+      <label class="sr-only" for="q">Search products</label>
+      <input class="search-input" id="q" type="search" autocomplete="off" placeholder="Search products, for example sliding or hinge">
+      <p class="sr-only" id="search-status" role="status"></p>
+      <ul class="results" id="results"></ul>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- 3. Hero -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+
+      <div class="hero-copy">
+        <p class="eyebrow lit">Original manufacturer and supplier</p>
+        <h1 id="hero-title">Clear glass, straight from the factory.</h1>
+        <p class="lead">Frameless shower doors, bathtub enclosures, panels and hardware at direct wholesale prices. Pick up in North Miami or have it shipped anywhere in the US.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#products">Shop all products</a>
+          <a class="btn btn-ghost" href="#trade">Wholesale and bulk orders</a>
+        </div>
+        <ul class="trust">
+          <li>In stock and ready to ship</li>
+          <li>Trade and retail</li>
+          <li>Best price guaranteed</li>
+        </ul>
+      </div>
+
+      <section class="builder" id="builder" aria-labelledby="builder-title">
+        <div class="builder-head">
+          <h2 id="builder-title">Enclosure builder</h2>
+          <span class="tag">Live preview</span>
+        </div>
+
+        <figure class="scene-frame">
+          <svg class="scene" id="scene" viewBox="0 8 640 384" role="img" aria-label="Illustration of a sliding door in matte black finish." data-finish="black" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <linearGradient id="wallG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E7EDF1"/><stop offset="1" stop-color="#C3CFD6"/></linearGradient>
+              <linearGradient id="interiorG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D4DFE5"/><stop offset="1" stop-color="#B3C3CC"/></linearGradient>
+              <linearGradient id="floorG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B9C6CE"/><stop offset="1" stop-color="#9DADB7"/></linearGradient>
+              <linearGradient id="shadeL" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2D4655" stop-opacity=".32"/><stop offset="1" stop-color="#2D4655" stop-opacity="0"/></linearGradient>
+              <linearGradient id="shadeR" x1="1" y1="0" x2="0" y2="0"><stop offset="0" stop-color="#2D4655" stop-opacity=".32"/><stop offset="1" stop-color="#2D4655" stop-opacity="0"/></linearGradient>
+              <linearGradient id="shadeT" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2D4655" stop-opacity=".22"/><stop offset="1" stop-color="#2D4655" stop-opacity="0"/></linearGradient>
+              <linearGradient id="niche" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3C5666" stop-opacity=".38"/><stop offset="1" stop-color="#3C5666" stop-opacity=".1"/></linearGradient>
+              <linearGradient id="porcelain" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".6" stop-color="#E9EFF2"/><stop offset="1" stop-color="#CAD6DD"/></linearGradient>
+              <linearGradient id="gFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#DDF3FB" stop-opacity=".62"/><stop offset="1" stop-color="#9ED2E8" stop-opacity=".26"/></linearGradient>
+              <linearGradient id="gStreak" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".66"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+              <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".38"/><stop offset=".45" stop-color="#fff" stop-opacity="0"/></linearGradient>
+              <radialGradient id="vignette" cx=".5" cy=".5" r=".75"><stop offset=".6" stop-color="#1F3442" stop-opacity="0"/><stop offset="1" stop-color="#1F3442" stop-opacity=".22"/></radialGradient>
+              <linearGradient id="hwChrome" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8E9BA5"/><stop offset=".28" stop-color="#F5F8FA"/><stop offset=".55" stop-color="#B9C4CC"/><stop offset=".8" stop-color="#EEF2F5"/><stop offset="1" stop-color="#7F8C96"/></linearGradient>
+              <linearGradient id="hwChromeV" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8E9BA5"/><stop offset=".3" stop-color="#F7FAFB"/><stop offset=".6" stop-color="#B4BFC7"/><stop offset="1" stop-color="#7F8C96"/></linearGradient>
+              <linearGradient id="hwBlack" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0B0D10"/><stop offset=".35" stop-color="#2D343A"/><stop offset="1" stop-color="#0F1215"/></linearGradient>
+              <linearGradient id="hwBlackV" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2F363C"/><stop offset=".5" stop-color="#14181B"/><stop offset="1" stop-color="#0B0D10"/></linearGradient>
+              <pattern id="tiles" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M0 .5H48M0 24.5H48M.5 0V24M24.5 24V48" fill="none" stroke="#4F6A7A" stroke-opacity=".17"/></pattern>
+              <pattern id="floorTiles" width="80" height="44" patternUnits="userSpaceOnUse"><path d="M0 .5H80M.5 0V44" fill="none" stroke="#4F6A7A" stroke-opacity=".2"/></pattern>
+            </defs>
+            <g id="scene-body"></g>
+            <rect width="640" height="410" fill="url(#sheen)" pointer-events="none"/>
+            <rect width="640" height="410" fill="url(#vignette)" pointer-events="none"/>
+          </svg>
+        </figure>
+        <noscript><p class="noscript">The live preview needs JavaScript. Pick an enclosure from the list below to see its price.</p></noscript>
+
+        <p class="field-label" id="type-label"><span class="n">01</span>Enclosure type</p>
+        <div class="chips" role="group" aria-labelledby="type-label" id="type-chips">
+          <button class="chip" type="button" aria-pressed="false" data-type="hinged" data-label="Hinged door" data-price="280" data-glass="3/8″ tempered" data-size="78″ H" data-row="row-hinged">
+            <span class="chip-name">Hinged door</span><span class="chip-price">$280</span>
+            <svg class="tick" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 7.4l2.6 2.6L11 4.6"/></svg>
+          </button>
+          <button class="chip" type="button" aria-pressed="false" data-type="half" data-label="Door with half wall" data-price="390" data-glass="3/8″ tempered" data-size="78″ H" data-row="row-half">
+            <span class="chip-name">Door with half wall</span><span class="chip-price">$390</span>
+            <svg class="tick" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 7.4l2.6 2.6L11 4.6"/></svg>
+          </button>
+          <button class="chip" type="button" aria-pressed="false" data-type="fixed" data-label="Fixed panel" data-price="155" data-glass="3/8″ tempered" data-size="78″ H" data-row="row-fixed">
+            <span class="chip-name">Fixed panel</span><span class="chip-price">$155</span>
+            <svg class="tick" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 7.4l2.6 2.6L11 4.6"/></svg>
+          </button>
+          <button class="chip" type="button" aria-pressed="true" data-type="sliding" data-label="Sliding door" data-price="420" data-glass="3/8″ tempered" data-size="78″ H" data-row="row-sliding">
+            <span class="chip-name">Sliding door</span><span class="chip-price">$420</span>
+            <svg class="tick" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 7.4l2.6 2.6L11 4.6"/></svg>
+          </button>
+          <button class="chip" type="button" aria-pressed="false" data-type="tubdoor" data-label="Sliding tub door" data-price="390" data-glass="3/8″ tempered" data-size="56″ to 60″ W × 78″ H" data-row="row-tubdoor">
+            <span class="chip-name">Sliding tub door</span><span class="chip-price">$390</span>
+            <svg class="tick" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 7.4l2.6 2.6L11 4.6"/></svg>
+          </button>
+          <button class="chip" type="button" aria-pressed="false" data-type="tubpanel" data-label="Tub panel" data-price="120" data-glass="1/4″ tempered" data-size="" data-row="row-tubpanel">
+            <span class="chip-name">Tub panel</span><span class="chip-price">$120</span>
+            <svg class="tick" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 7.4l2.6 2.6L11 4.6"/></svg>
+          </button>
+        </div>
+
+        <div class="finish-row">
+        <p class="field-label" id="finish-label"><span class="n">02</span>Finish</p>
+        <div class="finishes" role="group" aria-labelledby="finish-label" id="finish-btns">
+          <button class="finish" type="button" aria-pressed="false" data-finish="chrome">
+            <i class="sw sw-chrome" aria-hidden="true"></i>Chrome
+            <svg class="tick" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 7.4l2.6 2.6L11 4.6"/></svg>
+          </button>
+          <button class="finish" type="button" aria-pressed="true" data-finish="black">
+            <i class="sw sw-black" aria-hidden="true"></i>Matte black
+            <svg class="tick" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 7.4l2.6 2.6L11 4.6"/></svg>
+          </button>
+        </div>
+        </div>
+
+        <dl class="spec">
+          <div><dt>Glass</dt><dd id="spec-glass">3/8″ tempered</dd></div>
+          <div><dt>Size</dt><dd id="spec-size">78″ H</dd></div>
+          <div><dt>Finish</dt><dd id="spec-finish">Matte black</dd></div>
+        </dl>
+
+        <div class="buy">
+          <p class="price"><span class="pre">From</span><span class="amount" id="price">$420</span></p>
+          <a class="btn btn-primary" id="cta" href="#row-sliding"><span id="cta-text">See Sliding door options</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h9M8.5 4.5L12 8l-3.5 3.5"/></svg></a>
+        </div>
+        <p class="sr-only" id="live" role="status"></p>
+      </section>
+
+    </div>
+  </section>
+
+  <!-- 4. Facts strip -->
+  <section class="facts" aria-label="Key facts">
+    <div class="wrap">
+      <ul class="facts-grid">
+        <li><span class="fact-v">2015</span><span class="fact-l">Supplying glass since</span></li>
+        <li><span class="fact-v">3/8″</span><span class="fact-l">Tempered glass doors and panels</span></li>
+        <li><span class="fact-v">Mon to Fri</span><span class="fact-l">Pickup in North Miami, 9 AM to 5 PM</span></li>
+        <li><span class="fact-v">Nationwide</span><span class="fact-l">Shipping across the US</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 5. Shop by enclosure -->
+  <section class="section" id="shop" aria-labelledby="shop-title">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="eyebrow">Shop by enclosure</p>
+        <h2 id="shop-title">Every shower and tub, in frameless glass.</h2>
+      </header>
+
+      <ul class="cards">
+        <li class="card">
+          <div class="card-top">
+            <p class="spec-line">3/8″ tempered, 78″ H</p>
+            <svg class="glyph" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 6v52"/><rect x="18" y="8" width="28" height="46" rx="1.5"/><path d="M24 44l12-26"/><path d="M13 16h5M13 31h5M13 46h5"/><path d="M6 58h52" opacity=".5"/></svg>
+          </div>
+          <h3><a class="stretch" href="#row-fixed">Fixed shower glass panels</a></h3>
+          <div class="card-foot">
+            <p class="from"><span class="pre">From</span><span class="amt-lg">$155</span></p>
+            <span class="card-cta">See fixed panel options<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h9M8.5 4.5L12 8l-3.5 3.5"/></svg></span>
+          </div>
+        </li>
+
+        <li class="card">
+          <div class="card-top">
+            <p class="spec-line">3/8″ tempered, 78″ H</p>
+            <svg class="glyph" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 10h52"/><rect x="10" y="14" width="24" height="42" rx="1.5"/><rect x="28" y="14" width="26" height="42" rx="1.5"/><path d="M33 30v12"/><path d="M6 58h52" opacity=".5"/></svg>
+          </div>
+          <h3><a class="stretch" href="#row-sliding">Sliding shower doors</a></h3>
+          <div class="card-foot">
+            <p class="from"><span class="pre">From</span><span class="amt-lg">$420</span></p>
+            <span class="card-cta">See sliding door options<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h9M8.5 4.5L12 8l-3.5 3.5"/></svg></span>
+          </div>
+        </li>
+
+        <li class="card">
+          <div class="card-top">
+            <p class="spec-line">1/4″ tempered</p>
+            <svg class="glyph" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 44h52v5a7 7 0 0 1-7 7H13a7 7 0 0 1-7-7z"/><rect x="14" y="12" width="22" height="32" rx="1.5"/><path d="M19 38l8-20"/><path d="M10 18h4M10 34h4"/></svg>
+          </div>
+          <h3><a class="stretch" href="#row-tubpanel">Bathtub glass panels</a></h3>
+          <div class="card-foot">
+            <p class="from"><span class="pre">From</span><span class="amt-lg">$120</span></p>
+            <span class="card-cta">See tub panel options<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h9M8.5 4.5L12 8l-3.5 3.5"/></svg></span>
+          </div>
+        </li>
+
+        <li class="card">
+          <div class="card-top">
+            <p class="spec-line">3/8″ tempered, 56″ to 60″ W × 78″ H</p>
+            <svg class="glyph" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 46h52v4a6 6 0 0 1-6 6H12a6 6 0 0 1-6-6z"/><path d="M8 10h48"/><rect x="10" y="13" width="24" height="33" rx="1.5"/><rect x="28" y="13" width="26" height="33" rx="1.5"/><path d="M33 26v10"/></svg>
+          </div>
+          <h3><a class="stretch" href="#row-tubdoor">Bathtub sliding doors (clip on)</a></h3>
+          <div class="card-foot">
+            <p class="from"><span class="pre">From</span><span class="amt-lg">$390</span></p>
+            <span class="card-cta">See sliding tub door options<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h9M8.5 4.5L12 8l-3.5 3.5"/></svg></span>
+          </div>
+        </li>
+
+        <li class="card">
+          <div class="card-top">
+            <p class="spec-line">3/8″ tempered, 78″ H</p>
+            <svg class="glyph" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="36" width="22" height="20"/><path d="M4 36h26"/><rect x="8" y="8" width="18" height="26" rx="1.5"/><rect x="31" y="8" width="25" height="48" rx="1.5"/><path d="M35 28v10"/><path d="M53 16h5M53 46h5"/></svg>
+          </div>
+          <h3><a class="stretch" href="#row-half">Shower doors with half wall</a></h3>
+          <div class="card-foot">
+            <p class="from"><span class="pre">From</span><span class="amt-lg">$390</span></p>
+            <span class="card-cta">See half wall door options<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h9M8.5 4.5L12 8l-3.5 3.5"/></svg></span>
+          </div>
+        </li>
+
+        <li class="card">
+          <div class="card-top">
+            <p class="spec-line">3/8″ tempered, 78″ H</p>
+            <svg class="glyph" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="16" y="8" width="28" height="48" rx="1.5"/><path d="M12 16h5M12 32h5M12 48h5"/><path d="M39 28v12"/><path d="M47 56a26 26 0 0 0 9-18" stroke-dasharray="2 3" opacity=".7"/></svg>
+          </div>
+          <h3><a class="stretch" href="#row-hinged">Hinged shower doors</a></h3>
+          <div class="card-foot">
+            <p class="from"><span class="pre">From</span><span class="amt-lg">$280</span></p>
+            <span class="card-cta">See hinged door options<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h9M8.5 4.5L12 8l-3.5 3.5"/></svg></span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 6. Hardware and sliding systems -->
+  <section class="section flush" id="hardware" aria-labelledby="hardware-title">
+    <div class="wrap">
+      <div class="panel">
+        <div class="panel-copy">
+          <p class="eyebrow">Hardware</p>
+          <h2 id="hardware-title">Hardware and sliding systems</h2>
+          <p>The parts that hold, seal and slide your glass.</p>
+        </div>
+        <ul class="chip-wrap">
+          <li><a class="link-chip" href="#hardware" data-proto="Hinges category page">Hinges</a></li>
+          <li><a class="link-chip" href="#hardware" data-proto="Clamps category page">Clamps</a></li>
+          <li><a class="link-chip" href="#hardware" data-proto="Handles category page">Handles</a></li>
+          <li><a class="link-chip" href="#hardware" data-proto="U-Channels category page">U-Channels</a></li>
+          <li><a class="link-chip" href="#hardware" data-proto="Door seals category page">Door seals</a></li>
+          <li><a class="link-chip" href="#hardware" data-proto="Sliding door hardware category page">Sliding door hardware</a></li>
+          <li><a class="link-chip" href="#hardware" data-proto="Barn door hardware category page">Barn door hardware</a></li>
+          <li><a class="link-chip" href="#hardware" data-proto="Roller systems category page">Roller systems</a></li>
+          <li><a class="link-chip" href="#row-mirror">Mirror tiles</a></li>
+          <li><a class="link-chip" href="#row-table">Round table tops</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Best sellers as a spec sheet -->
+  <section class="section" id="products" aria-labelledby="products-title">
+    <div class="wrap">
+      <header class="sec-head split">
+        <div style="display:grid;gap:14px;justify-items:start">
+          <p class="eyebrow">Best sellers</p>
+          <h2 id="products-title">Best sellers, with the specs up front.</h2>
+        </div>
+        <div class="filters" role="group" aria-label="Filter products" id="filters">
+          <button class="fchip" type="button" aria-pressed="true" data-filter="all">All</button>
+          <button class="fchip" type="button" aria-pressed="false" data-filter="doors">Doors</button>
+          <button class="fchip" type="button" aria-pressed="false" data-filter="panels">Panels</button>
+          <button class="fchip" type="button" aria-pressed="false" data-filter="tiles">Tiles and tops</button>
+        </div>
+      </header>
+
+      <p class="sheet-status mono" id="sheet-status" role="status">Showing 8 of 8 products</p>
+
+      <div class="sheet">
+        <div class="sheet-head mono" aria-hidden="true"><span>Product</span><span>Specification</span><span>Price</span><span></span></div>
+        <ul class="sheet-list" id="sheet-list">
+
+          <li class="row" id="row-hinged" data-cat="doors">
+            <h3 class="r-name">Single Hinged Frameless Glass Shower Door</h3>
+            <p class="r-spec">3/8″ tempered glass</p>
+            <p class="r-price"><span class="pre">From</span><span>$280</span></p>
+            <button class="btn btn-ghost btn-row" type="button" data-proto="Product page, Single Hinged Frameless Glass Shower Door">Select options<span class="sr-only"> for Single Hinged Frameless Glass Shower Door</span></button>
+          </li>
+
+          <li class="row" id="row-half" data-cat="doors">
+            <h3 class="r-name">Frameless Shower Door With Half Wall</h3>
+            <p class="r-spec">3/8″ tempered glass, 78″ H</p>
+            <p class="r-price"><span class="pre">From</span><span>$390</span></p>
+            <button class="btn btn-ghost btn-row" type="button" data-proto="Product page, Frameless Shower Door With Half Wall">Select options<span class="sr-only"> for Frameless Shower Door With Half Wall</span></button>
+          </li>
+
+          <li class="row" id="row-tubpanel" data-cat="panels">
+            <h3 class="r-name">Frameless Bathtub Glass Panel</h3>
+            <p class="r-spec">1/4″ tempered glass</p>
+            <p class="r-price"><span class="pre">From</span><span>$120</span></p>
+            <button class="btn btn-ghost btn-row" type="button" data-proto="Product page, Frameless Bathtub Glass Panel">Select options<span class="sr-only"> for Frameless Bathtub Glass Panel</span></button>
+          </li>
+
+          <li class="row" id="row-fixed" data-cat="panels">
+            <h3 class="r-name">Frameless Fixed Shower Glass Panel</h3>
+            <p class="r-spec">3/8″ tempered glass, 78″ H</p>
+            <p class="r-price"><span class="pre">From</span><span>$155</span></p>
+            <button class="btn btn-ghost btn-row" type="button" data-proto="Product page, Frameless Fixed Shower Glass Panel">Select options<span class="sr-only"> for Frameless Fixed Shower Glass Panel</span></button>
+          </li>
+
+          <li class="row" id="row-tubdoor" data-cat="doors">
+            <h3 class="r-name">Frameless Sliding Bathtub Shower Door</h3>
+            <p class="r-spec">56″ to 60″ W × 78″ H, 3/8″ tempered</p>
+            <p class="r-price"><span class="pre">From</span><span>$390</span></p>
+            <button class="btn btn-ghost btn-row" type="button" data-proto="Product page, Frameless Sliding Bathtub Shower Door">Select options<span class="sr-only"> for Frameless Sliding Bathtub Shower Door</span></button>
+          </li>
+
+          <li class="row" id="row-sliding" data-cat="doors">
+            <h3 class="r-name">Frameless Sliding Glass Shower Door</h3>
+            <p class="r-spec">3/8″ tempered glass, 78″ H</p>
+            <p class="r-price"><span class="pre">From</span><span>$420</span></p>
+            <button class="btn btn-ghost btn-row" type="button" data-proto="Product page, Frameless Sliding Glass Shower Door">Select options<span class="sr-only"> for Frameless Sliding Glass Shower Door</span></button>
+          </li>
+
+          <li class="row" id="row-mirror" data-cat="tiles">
+            <h3 class="r-name">Matte Mirror Backsplash Tile</h3>
+            <p class="r-spec">Peel and stick, 3″ × 10″, beveled edge</p>
+            <p class="r-price"><span>$12.45</span><span class="unit">per sq ft</span></p>
+            <button class="btn btn-ghost btn-row" type="button" data-proto="Product page, Matte Mirror Backsplash Tile">Select options<span class="sr-only"> for Matte Mirror Backsplash Tile</span></button>
+          </li>
+
+          <li class="row" id="row-table" data-cat="tiles">
+            <h3 class="r-name">Round Glass Table Top</h3>
+            <p class="r-spec">Clear tempered glass</p>
+            <p class="r-price"><span class="todo">See sizes</span><span class="flag">Price to confirm</span></p>
+            <button class="btn btn-ghost btn-row" type="button" data-proto="Product page, Round Glass Table Top">Select options<span class="sr-only"> for Round Glass Table Top</span></button>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Why Leal -->
+  <section class="section" id="why" aria-labelledby="why-title">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="eyebrow">Why Leal</p>
+        <h2 id="why-title">Wholesale pricing with retail convenience.</h2>
+      </header>
+
+      <ul class="pillars">
+        <li class="pillar"><h3>Direct wholesale supplier</h3><p>Leal is the original manufacturer and supplier, so you buy direct.</p></li>
+        <li class="pillar"><h3>Best price guaranteed</h3><p>Our price is the best price, and we guarantee it.</p></li>
+        <li class="pillar"><h3>In stock and ready to ship</h3><p>Stocked in North Miami for pickup or shipping across the US.</p></li>
+        <li class="pillar"><h3>Complete glass solutions</h3><p>Doors, panels, hardware, mirror tiles and table tops from one supplier.</p></li>
+        <li class="pillar"><h3>Trade and retail</h3><p>Wholesale for contractors. Retail for homeowners.</p></li>
+      </ul>
+
+      <div class="trade" id="trade">
+        <div class="trade-copy">
+          <h3>Contractor, remodeler or reseller?</h3>
+          <p>Ask for wholesale pricing on bulk orders. Email <a class="link" href="mailto:sales@lealglassinc.com">sales@lealglassinc.com</a> or call <a class="link nowrap" href="tel:+13058420305">+1 305-842-0305</a>.</p>
+        </div>
+        <a class="btn btn-primary" href="mailto:sales@lealglassinc.com?subject=Wholesale%20and%20bulk%20order%20quote">Wholesale and bulk orders</a>
+      </div>
+
+      <section class="proof" aria-labelledby="proof-title">
+        <div class="proof-head">
+          <h3 id="proof-title">Proof for a safety product</h3>
+          <span class="flag">Placeholders</span>
+        </div>
+        <p class="proof-sub">Glass is a safety product, so this space is reserved for proof. Each slot below needs real content from Leal.</p>
+        <ul class="proof-grid">
+          <li class="slot">
+            <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3l9 3.5v6.6c0 5.3-3.6 9.4-9 11.4-5.4-2-9-6.1-9-11.4V6.5z"/><path d="M10 14l3 3 5-6"/></svg>
+            <span class="flag">Placeholder</span>
+            <h4>Certification badges</h4>
+            <p>Add each badge, the standard it covers and a link to the Certificates page.</p>
+          </li>
+          <li class="slot">
+            <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4l2.9 6 6.6.8-4.9 4.5 1.3 6.5L14 18.5 8.1 21.8l1.3-6.5L4.5 10.8 11.1 10z"/></svg>
+            <span class="flag">Placeholder</span>
+            <h4>Customer reviews</h4>
+            <p>Add the real rating and a few real reviews, with name, date and product.</p>
+          </li>
+          <li class="slot">
+            <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="6.5" width="21" height="15" rx="2"/><circle cx="14" cy="14" r="3.8"/><path d="M10 6.5l1.2-2h5.6l1.2 2"/></svg>
+            <span class="flag">Placeholder</span>
+            <h4>Installed projects</h4>
+            <p>Add photos of finished installs, with the city and the product used.</p>
+          </li>
+          <li class="slot">
+            <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3.5h8.5L21 8v16.5H8z"/><path d="M16 3.5V8h5M11 13h7M11 17h7"/></svg>
+            <span class="flag">Placeholder</span>
+            <h4>Warranty summary</h4>
+            <p>Add a short warranty summary and a link to the full terms.</p>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </section>
+
+  <!-- 9. Pickup and sales -->
+  <section class="section" id="pickup" aria-labelledby="pickup-title">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="eyebrow">Pickup and sales</p>
+        <h2 id="pickup-title">Pick up your glass in North Miami.</h2>
+      </header>
+
+      <dl class="info">
+        <div>
+          <dt>Address</dt>
+          <dd>
+            <address>18361 NE 4th Ct,<br>North Miami, Florida 33179</address>
+            <span class="flag">Owner to confirm address</span>
+            <a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=18361%20NE%204th%20Ct%2C%20North%20Miami%2C%20Florida%2033179" target="_blank" rel="noopener noreferrer">Get directions</a>
+          </dd>
+        </div>
+        <div>
+          <dt>Hours</dt>
+          <dd>Monday to Friday<br>9:00 AM to 5:00 PM<span class="sub">Closed weekends</span></dd>
+        </div>
+        <div>
+          <dt>Phone</dt>
+          <dd><a class="nowrap" href="tel:+13058420305">+1 305-842-0305</a></dd>
+        </div>
+        <div>
+          <dt>Email</dt>
+          <dd><a href="mailto:sales@lealglassinc.com">sales@lealglassinc.com</a></dd>
+        </div>
+      </dl>
+      <p class="note">Not nearby? We ship across the US. Free shipping on orders over $75.</p>
+    </div>
+  </section>
+
+  <!-- 10. Newsletter -->
+  <section class="section" id="newsletter" aria-labelledby="news-title">
+    <div class="wrap">
+      <div class="news">
+        <div class="news-copy">
+          <h2 id="news-title">Get a 10% cash back offer.</h2>
+          <p>Join the list and we will email you the offer.</p>
+          <p class="terms"><span class="flag">Offer terms to confirm</span><span>What the 10% applies to, minimum order, expiry and how it is paid.</span></p>
+        </div>
+        <form class="news-form" id="news-form" novalidate>
+          <label class="sr-only" for="email">Email address</label>
+          <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" required>
+          <button class="btn btn-primary" type="submit">Join the list</button>
+          <p class="news-msg" id="news-msg" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- 11. Footer -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="#top" aria-label="Leal Glass Inc, back to top">
+          <svg class="brand-mark" viewBox="0 0 28 30" aria-hidden="true" focusable="false">
+            <path d="M9.5 2.5h16l-6.8 25H2.7z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M12 21.5l7.2-12" fill="none" stroke="#5CE1E6" stroke-width="2" stroke-linecap="round"/>
+            <path d="M15.2 24.5l5-8.4" fill="none" stroke="#5CE1E6" stroke-opacity=".55" stroke-width="1.4" stroke-linecap="round"/>
+          </svg>
+          <span class="brand-text" style="font-size:.9375rem;letter-spacing:.22em">LEAL GLASS</span>
+        </a>
+        <p>Original manufacturer and supplier of frameless glass shower solutions in North Miami, Florida. Supplying glass since 2015.</p>
+        <ul class="social" aria-label="Social links">
+          <li><a href="#" data-proto="Facebook page, URL to add">Facebook<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10l6-6M5 4h5v5"/></svg></a></li>
+          <li><a href="#" data-proto="Instagram profile, URL to add">Instagram<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10l6-6M5 4h5v5"/></svg></a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=18361%20NE%204th%20Ct%2C%20North%20Miami%2C%20Florida%2033179" target="_blank" rel="noopener noreferrer">Google Maps<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10l6-6M5 4h5v5"/></svg></a></li>
+        </ul>
+      </div>
+
+      <nav class="foot-col" aria-labelledby="foot-shop">
+        <h2 class="foot-h" id="foot-shop">Shop</h2>
+        <a href="#products">Shop all</a>
+        <a href="#shop">Shower enclosures</a>
+        <a href="#hardware">Hardware and sliding systems</a>
+        <a href="#products" data-filter-link="tiles">Mirror tiles</a>
+        <a href="#products" data-filter-link="tiles">Round table tops</a>
+      </nav>
+
+      <nav class="foot-col" aria-labelledby="foot-company">
+        <h2 class="foot-h" id="foot-company">Company</h2>
+        <a href="#" data-proto="Certificates page">Certificates</a>
+        <a href="#trade">Wholesale and bulk orders</a>
+        <a href="#pickup">Pickup and sales</a>
+      </nav>
+
+      <nav class="foot-col" aria-labelledby="foot-info">
+        <h2 class="foot-h" id="foot-info">Customer information</h2>
+        <a href="#pickup">Shipping and pickup</a>
+        <span class="pending">Warranty summary <span class="flag">Link to add</span></span>
+        <span class="pending">Returns policy <span class="flag">Link to add</span></span>
+      </nav>
+    </div>
+
+    <div class="foot-bottom">
+      <p>&copy; 2015 to 2026 Leal Glass Inc</p>
+      <ul>
+        <li><a href="#" data-proto="Terms page">Terms</a></li>
+        <li><a href="#" data-proto="Privacy page">Privacy</a></li>
+        <li><a href="#" data-proto="Cookie policy page">Cookie policy</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status"><span class="flag" style="color:var(--aqua);border-color:var(--aqua-line);background:var(--aqua-tint)">Prototype</span><span id="toast-text"></span></div>
+
+<script>
+(() => {
+  'use strict';
+
+  const $ = (sel, root = document) => root.querySelector(sel);
+  const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+
+  /* ------------------------------------------------------------------
+     Prototype links. Anything with data-proto has no live destination yet.
+     The toast says where it will go in production.
+     ------------------------------------------------------------------ */
+  const toast = $('#toast');
+  const toastText = $('#toast-text');
+  let toastTimer;
+  function say(message) {
+    toastText.textContent = message;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove('show'), 4200);
+  }
+
+  /* ------------------------------------------------------------------
+     Navigation menu and search
+     ------------------------------------------------------------------ */
+  const nav = $('.nav');
+  const menuBtn = $('#menu-btn');
+  const searchBtn = $('#search-btn');
+  const searchPanel = $('#search-panel');
+  const searchInput = $('#q');
+  const results = $('#results');
+  const searchStatus = $('#search-status');
+
+  function setMenu(open) {
+    nav.classList.toggle('open', open);
+    menuBtn.setAttribute('aria-expanded', String(open));
+    menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Menu');
+  }
+  function setSearch(open) {
+    searchPanel.hidden = !open;
+    searchBtn.setAttribute('aria-expanded', String(open));
+    if (open) {
+      setMenu(false);
+      renderResults(searchInput.value);
+      searchInput.focus();
+    }
+  }
+  menuBtn.addEventListener('click', () => {
+    const open = !nav.classList.contains('open');
+    if (open) setSearch(false);
+    setMenu(open);
+  });
+  searchBtn.addEventListener('click', () => setSearch(searchPanel.hidden));
+  $$('#site-nav a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', e => {
+    if (e.key !== 'Escape') return;
+    if (!searchPanel.hidden) { setSearch(false); searchBtn.focus(); }
+    else if (nav.classList.contains('open')) { setMenu(false); menuBtn.focus(); }
+  });
+
+  /* Search index, built from the page itself so it never drifts from the listings. */
+  const searchIndex = [
+    ...$$('.row').map(row => ({
+      href: '#' + row.id,
+      name: $('.r-name', row).textContent.trim(),
+      spec: $('.r-spec', row).textContent.trim(),
+      where: 'Product'
+    })),
+    ...$$('#hardware [data-proto]').map(a => ({
+      href: '#hardware',
+      name: a.textContent.trim(),
+      spec: 'Hardware',
+      where: 'Hardware'
+    }))
+  ];
+
+  function renderResults(query) {
+    const words = query.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    results.textContent = '';
+    const note = text => {
+      const li = document.createElement('li');
+      const p = document.createElement('p');
+      p.className = 'hint';
+      p.textContent = text;
+      li.append(p);
+      results.append(li);
+    };
+    if (!words.length) {
+      note('Try sliding, hinged, panel, mirror or clamps.');
+      searchStatus.textContent = '';
+      return;
+    }
+    const hits = searchIndex
+      .filter(item => words.every(w => (item.name + ' ' + item.spec).toLowerCase().includes(w)))
+      .slice(0, 6);
+    if (!hits.length) {
+      note('No match. Call +1 305-842-0305 or email sales@lealglassinc.com.');
+      searchStatus.textContent = 'No results';
+      return;
+    }
+    hits.forEach(item => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = item.href;
+      const name = document.createElement('span');
+      name.textContent = item.name;
+      const where = document.createElement('span');
+      where.className = 'where';
+      where.textContent = item.where;
+      a.append(name, where);
+      a.addEventListener('click', () => setSearch(false));
+      li.append(a);
+      results.append(li);
+    });
+    searchStatus.textContent = hits.length + (hits.length === 1 ? ' result' : ' results');
+  }
+  searchInput.addEventListener('input', () => renderResults(searchInput.value));
+  searchInput.addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
+      const first = $('a', results);
+      if (first) { e.preventDefault(); first.click(); }
+    }
+  });
+
+  /* ------------------------------------------------------------------
+     Spec sheet filters
+     ------------------------------------------------------------------ */
+  const filterBtns = $$('#filters .fchip');
+  const rows = $$('.row');
+  const sheetStatus = $('#sheet-status');
+
+  function setFilter(filter) {
+    let shown = 0;
+    filterBtns.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.filter === filter)));
+    rows.forEach(row => {
+      const show = filter === 'all' || row.dataset.cat === filter;
+      row.hidden = !show;
+      if (show) shown++;
+    });
+    sheetStatus.textContent = 'Showing ' + shown + ' of ' + rows.length + ' products';
+  }
+  filterBtns.forEach(b => b.addEventListener('click', () => setFilter(b.dataset.filter)));
+
+  /* Links that point at a product row must reveal it first, then jump. */
+  function revealTarget(hash) {
+    const el = hash && hash.length > 1 ? document.getElementById(hash.slice(1)) : null;
+    if (el && el.hidden) setFilter('all');
+    return el;
+  }
+  document.addEventListener('click', e => {
+    const proto = e.target.closest('[data-proto]');
+    if (proto) {
+      e.preventDefault();
+      say('Prototype link. Live destination: ' + proto.dataset.proto + '.');
+      return;
+    }
+    const filterLink = e.target.closest('[data-filter-link]');
+    if (filterLink) setFilter(filterLink.dataset.filterLink);
+    const rowLink = e.target.closest('a[href^="#row-"]');
+    if (rowLink) revealTarget(rowLink.getAttribute('href'));
+  });
+  window.addEventListener('hashchange', () => {
+    const el = revealTarget(location.hash);
+    if (el) el.scrollIntoView();
+  });
+
+  /* ------------------------------------------------------------------
+     Enclosure builder
+     ------------------------------------------------------------------ */
+  const FLOOR = 366, CURB = 357, RIM = 298, TOP = 40;
+  let uid = 0;
+
+  const part = (x, y, w, h, o = {}) => {
+    const rx = o.rx !== undefined ? o.rx : Math.min(3, w / 2, h / 2);
+    const horizontal = w > h;
+    let s = `<rect class="hw${horizontal ? ' hz' : ''}" x="${x}" y="${y}" width="${w}" height="${h}" rx="${rx}"/>`;
+    s += horizontal
+      ? `<path class="hl" d="M${x + rx + 1} ${y + h * .32}H${x + w - rx - 1}"/>`
+      : `<path class="hl" d="M${x + w * .3} ${y + rx + 1}V${y + h - rx - 1}"/>`;
+    (o.screws || []).forEach(([cx, cy]) => { s += `<circle class="screw" cx="${cx}" cy="${cy}" r="1.5"/>`; });
+    return s;
+  };
+  const wheel = (cx, cy) => `<circle class="hw" cx="${cx}" cy="${cy}" r="7"/><circle class="axle" cx="${cx}" cy="${cy}" r="2.6"/>`;
+  const handle = (x, y, len) =>
+    `<circle class="hw" cx="${x + 3.5}" cy="${y + 9}" r="4.6"/><circle class="hw" cx="${x + 3.5}" cy="${y + len - 9}" r="4.6"/>` +
+    part(x, y, 7, len, { rx: 3.5 });
+  const clamps = (x, ys) => ys.map(y => part(x, y, 14, 30, { screws: [[x + 7, y + 8], [x + 7, y + 22]] })).join('');
+  const hinges = (x, ys) => ys.map(y => part(x, y, 18, 34, { screws: [[x + 9, y + 9], [x + 9, y + 25]] })).join('');
+  const hingeYs = [TOP + 20, Math.round((TOP + CURB) / 2 - 17), CURB - 56];
+
+  function glass(x, y, w, h, o = {}) {
+    const id = 'gc' + (++uid);
+    const run = Math.round(h * .2);
+    const a = x + w * (o.at !== undefined ? o.at : .2);
+    const bw = Math.max(16, w * .17);
+    const b = x + w * (o.at2 !== undefined ? o.at2 : .62);
+    return `<g class="glass">
+      <clipPath id="${id}"><rect x="${x}" y="${y}" width="${w}" height="${h}" rx="2"/></clipPath>
+      <rect x="${x}" y="${y}" width="${w}" height="${h}" rx="2" fill="url(#gFill)"/>
+      <g clip-path="url(#${id})">
+        <rect x="${x - 8}" y="${y - 8}" width="${w + 16}" height="${h + 16}" fill="url(#tiles)" opacity=".7" transform="translate(5 -4)"/>
+        <g class="streak">
+          <polygon points="${a},${y + h} ${a + bw},${y + h} ${a + bw + run},${y} ${a + run},${y}" fill="url(#gStreak)"/>
+          <polygon points="${b},${y + h} ${b + 5},${y + h} ${b + 5 + run},${y} ${b + run},${y}" fill="url(#gStreak)" opacity=".85"/>
+        </g>
+      </g>
+      <rect x="${x}" y="${y}" width="${w}" height="${h}" rx="2" fill="none" stroke="#5DB0C6" stroke-opacity=".8" stroke-width="1.5"/>
+      <rect x="${x + 1.6}" y="${y + 1.6}" width="${w - 3.2}" height="${h - 3.2}" rx="1.2" fill="none" stroke="#fff" stroke-opacity=".95" stroke-width="2"/>
+    </g>`;
+  }
+
+  function backdrop(ax0, ax1) {
+    const w = ax1 - ax0;
+    return `
+      <rect width="640" height="410" fill="url(#wallG)"/>
+      <rect width="640" height="410" fill="url(#tiles)"/>
+      <rect x="${ax0}" y="0" width="${w}" height="${FLOOR}" fill="url(#interiorG)"/>
+      <rect x="${ax0}" y="0" width="${w}" height="${FLOOR}" fill="url(#tiles)"/>
+      <rect x="${ax0}" y="0" width="36" height="${FLOOR}" fill="url(#shadeL)"/>
+      <rect x="${ax1 - 36}" y="0" width="36" height="${FLOOR}" fill="url(#shadeR)"/>
+      <rect x="${ax0}" y="0" width="${w}" height="50" fill="url(#shadeT)"/>
+      <path d="M${ax0} 0V${FLOOR}M${ax1} 0V${FLOOR}" stroke="#3B5565" stroke-opacity=".4"/>
+      <rect y="${FLOOR}" width="640" height="${410 - FLOOR}" fill="url(#floorG)"/>
+      <rect y="${FLOOR}" width="640" height="${410 - FLOOR}" fill="url(#floorTiles)"/>
+      <path d="M0 ${FLOOR}H640" stroke="#3B5565" stroke-opacity=".4"/>`;
+  }
+  const curb = (x0, x1) =>
+    `<rect x="${x0}" y="${CURB}" width="${x1 - x0}" height="${FLOOR - CURB}" fill="#F4F8FA" stroke="#3B5565" stroke-opacity=".4"/>` +
+    `<path d="M${x0 + 1} ${CURB + 1.5}H${x1 - 1}" stroke="#fff"/>`;
+  const tub = (x0, x1) => `
+    <rect x="${x0}" y="${RIM}" width="${x1 - x0}" height="${FLOOR - RIM}" rx="6" fill="url(#porcelain)" stroke="#3B5565" stroke-opacity=".4"/>
+    <rect x="${x0}" y="${RIM}" width="${x1 - x0}" height="9" rx="4.5" fill="#fff" stroke="#3B5565" stroke-opacity=".3"/>
+    <path d="M${x0 + 14} ${RIM + 26}H${x1 - 14}" stroke="#3B5565" stroke-opacity=".14"/>`;
+  const halfWall = (x0, x1) => `
+    <rect x="${x0 - 4}" y="228" width="${x1 - x0 + 8}" height="${CURB - 228}" fill="#CBD8DF" stroke="#3B5565" stroke-opacity=".5"/>
+    <rect x="${x0 - 4}" y="228" width="${x1 - x0 + 8}" height="${CURB - 228}" fill="url(#tiles)"/>
+    <rect x="${x0 - 4}" y="228" width="${x1 - x0 + 8}" height="${CURB - 228}" fill="url(#tiles)"/>
+    <rect x="${x0 - 4}" y="228" width="${x1 - x0 + 8}" height="16" fill="#2D4655" opacity=".16"/>
+    <rect x="${x0 - 8}" y="217" width="${x1 - x0 + 16}" height="11" rx="2" fill="#F7FAFB" stroke="#3B5565" stroke-opacity=".45"/>`;
+  const showerHead = cx => `<g class="fx"><rect x="${cx - 2.5}" y="62" width="5" height="44" rx="2.5"/><rect x="${cx - 28}" y="102" width="56" height="9" rx="4.5"/></g>`;
+  const valve = cx => `<g class="fx"><circle cx="${cx}" cy="204" r="13"/><circle cx="${cx}" cy="204" r="4"/><rect x="${cx - 2}" y="176" width="4" height="11" rx="2"/></g>`;
+  const spout = cx => `<g class="fx"><rect x="${cx - 15}" y="262" width="30" height="9" rx="4.5"/><circle cx="${cx + 9}" cy="266.5" r="2.4"/></g>`;
+  const niche = (x, y) => `<rect x="${x}" y="${y}" width="58" height="52" fill="url(#niche)" stroke="#3B5565" stroke-opacity=".4"/><path d="M${x} ${y + 26}H${x + 58}" stroke="#3B5565" stroke-opacity=".28"/>`;
+  const dimV = (x, y1, y2, label) => {
+    const m = (y1 + y2) / 2;
+    return `<g class="dim"><path d="M${x} ${y1}V${y2}M${x - 5} ${y1}H${x + 5}M${x - 5} ${y2}H${x + 5}"/><text x="${x - 9}" y="${m}" transform="rotate(-90 ${x - 9} ${m})" text-anchor="middle">${label}</text></g>`;
+  };
+  const dimH = (y, x1, x2, label) => {
+    const m = (x1 + x2) / 2;
+    return `<g class="dim"><path d="M${x1} ${y}H${x2}M${x1} ${y - 5}V${y + 5}M${x2} ${y - 5}V${y + 5}"/><text x="${m}" y="${y - 8}" text-anchor="middle">${label}</text></g>`;
+  };
+  const railSet = (xs) =>
+    part(184, TOP, 272, 12, { rx: 6 }) +
+    xs.map(cx => part(cx - 7, TOP + 12, 14, 30, { screws: [[cx, TOP + 34]] }) + wheel(cx, TOP + 6)).join('');
+
+  const SCENES = {
+    hinged: () =>
+      backdrop(244, 396) + showerHead(320) + valve(320) + curb(238, 402) +
+      `<g class="glass-g">${glass(252, TOP, 136, CURB - 2 - TOP, { at: .14 })}</g>` +
+      `<g class="hw-g">${hinges(246, hingeYs)}${handle(363, 176, 84)}</g>` +
+      dimV(200, TOP, FLOOR, '78″ H'),
+
+    half: () =>
+      backdrop(190, 450) + niche(206, 150) + showerHead(398) + valve(398) + curb(184, 456) + halfWall(190, 316) +
+      `<g class="glass-g">${glass(194, TOP, 118, 172, { at: .2 })}${glass(322, TOP, 124, CURB - 2 - TOP, { at: .16 })}</g>` +
+      `<g class="hw-g">${part(194, 209, 118, 8)}${clamps(188, [72, 144])}${hinges(437, hingeYs)}${handle(332, 176, 84)}</g>` +
+      dimV(150, TOP, FLOOR, '78″ H'),
+
+    fixed: () =>
+      backdrop(190, 450) + niche(204, 150) + showerHead(400) + valve(400) + curb(184, 456) +
+      `<g class="glass-g">${glass(196, TOP, 154, CURB - 2 - TOP, { at: .2 })}</g>` +
+      `<g class="hw-g">${clamps(189, [76, 186, 296])}${part(196, CURB - 8, 154, 7)}</g>` +
+      dimV(150, TOP, FLOOR, '78″ H'),
+
+    sliding: () =>
+      backdrop(190, 450) + niche(204, 150) + showerHead(398) + valve(398) + curb(184, 456) +
+      `<g class="glass-g">${glass(194, TOP + 16, 136, CURB - 2 - TOP - 16, { at: .18 })}${glass(314, TOP + 16, 132, CURB - 2 - TOP - 16, { at: .12 })}</g>` +
+      `<g class="hw-g">${railSet([342, 424])}${handle(323, 176, 84)}${part(194, CURB - 8, 136, 7)}${clamps(188, [96, 256])}</g>` +
+      dimV(150, TOP, FLOOR, '78″ H'),
+
+    tubdoor: () =>
+      backdrop(190, 450) + showerHead(398) + valve(398) + spout(398) + tub(184, 456) +
+      `<g class="glass-g">${glass(194, TOP + 16, 136, RIM - TOP - 16, { at: .18 })}${glass(314, TOP + 16, 132, RIM - TOP - 16, { at: .12 })}</g>` +
+      `<g class="hw-g">${railSet([342, 424])}${handle(323, 150, 84)}${part(194, RIM - 8, 252, 7)}</g>` +
+      dimV(150, TOP, FLOOR, '78″ H') + dimH(27, 190, 450, '56″ to 60″ W'),
+
+    tubpanel: () =>
+      backdrop(190, 450) + showerHead(398) + valve(398) + spout(398) + tub(184, 456) +
+      `<g class="glass-g">${glass(196, 96, 124, RIM - 96, { at: .18 })}</g>` +
+      `<g class="hw-g">${clamps(189, [118, 226])}${part(196, RIM - 8, 124, 7)}</g>`
+  };
+
+  const sceneEl = $('#scene');
+  const sceneBody = $('#scene-body');
+  const typeBtns = $$('#type-chips .chip');
+  const finishBtns = $$('#finish-btns .finish');
+  const state = { type: 'sliding', finish: 'black' };
+
+  function renderBuilder(animate) {
+    const chip = typeBtns.find(b => b.dataset.type === state.type);
+    const finishName = state.finish === 'black' ? 'Matte black' : 'Chrome';
+
+    sceneEl.classList.toggle('animate', Boolean(animate));
+    sceneBody.innerHTML = SCENES[state.type]();
+    sceneEl.dataset.finish = state.finish;
+    sceneEl.setAttribute('aria-label', 'Illustration of a ' + chip.dataset.label.toLowerCase() + ' in ' + finishName.toLowerCase() + ' finish.');
+
+    typeBtns.forEach(b => b.setAttribute('aria-pressed', String(b === chip)));
+    finishBtns.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.finish === state.finish)));
+    updateReadout(chip, finishName);
+  }
+
+  function updateReadout(chip, finishName) {
+    const size = chip.dataset.size;
+    const sizeEl = $('#spec-size');
+    $('#spec-glass').textContent = chip.dataset.glass;
+    sizeEl.textContent = size || 'See sizes';
+    sizeEl.classList.toggle('todo', !size);
+    $('#spec-finish').textContent = finishName;
+    $('#price').textContent = '$' + chip.dataset.price;
+    $('#cta-text').textContent = 'See ' + chip.dataset.label + ' options';
+    $('#cta').setAttribute('href', '#' + chip.dataset.row);
+    $('#live').textContent = chip.dataset.label + ', ' + finishName + '. From $' + chip.dataset.price + '.';
+  }
+
+  typeBtns.forEach(b => b.addEventListener('click', () => {
+    if (state.type === b.dataset.type) return;
+    state.type = b.dataset.type;
+    renderBuilder(true);
+  }));
+  finishBtns.forEach(b => b.addEventListener('click', () => {
+    if (state.finish === b.dataset.finish) return;
+    state.finish = b.dataset.finish;
+    const chip = typeBtns.find(c => c.dataset.type === state.type);
+    const finishName = state.finish === 'black' ? 'Matte black' : 'Chrome';
+    sceneEl.dataset.finish = state.finish;
+    sceneEl.setAttribute('aria-label', 'Illustration of a ' + chip.dataset.label.toLowerCase() + ' in ' + finishName.toLowerCase() + ' finish.');
+    finishBtns.forEach(f => f.setAttribute('aria-pressed', String(f === b)));
+    updateReadout(chip, finishName);
+  }));
+
+  renderBuilder(false);
+  $('#live').textContent = '';
+
+  /* ------------------------------------------------------------------
+     Newsletter. Nothing is submitted in the prototype.
+     ------------------------------------------------------------------ */
+  const form = $('#news-form');
+  const email = $('#email');
+  const msg = $('#news-msg');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const value = email.value.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+      email.setAttribute('aria-invalid', 'true');
+      msg.className = 'news-msg err';
+      msg.textContent = 'Enter a full email address, for example name@example.com.';
+      email.focus();
+      return;
+    }
+    email.removeAttribute('aria-invalid');
+    msg.className = 'news-msg ok';
+    msg.textContent = 'Prototype only. Nothing was submitted. A live form would send the offer to ' + value + '.';
+  });
+})();
+</script>
+</body>
+</html>
